@@ -35,6 +35,7 @@ namespace CSharpGoRGB.view
                     picture.ScaleBitmap(picture.ImageBitmap, pictureBox.Width, pictureBox.Height);
                     picture.GetPaddingWidth(picture.ImageBitmap, pictureBox.Width);
                     picture.GetPaddingHeight(picture.ImageBitmap, pictureBox.Height);
+                    // Reset padding to default. They were adding up before
                     pictureBox.Padding = new Padding(0, 0, 0, 0);
                     pictureBox.Padding = new Padding(picture.PaddingWidth, picture.PaddingHeight, 0, 0);
                     pictureBox.Image = picture.ImageBitmap;
