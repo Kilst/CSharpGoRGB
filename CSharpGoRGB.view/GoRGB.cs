@@ -20,24 +20,33 @@ namespace CSharpGoRGB.view
             InitializeComponent();
         }
 
+        // Create new picture object
         Picture picture = new Picture();
 
         private void btnLoadImage_Click(object sender, EventArgs e)
         {
+            // Load an image
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
+                // Get file location
                 string file = openFileDialog1.FileName;
                 try
                 {
+                    // Create image from file location
                     Image image = Image.FromFile(file);
+                    // Create and set bitmap
                     picture.ImageBitmap = new Bitmap(image);
+                    // Scale Bitmap to fit in picturebox
                     picture.ScaleBitmap(picture.ImageBitmap, pictureBox.Width, pictureBox.Height);
+                    // Center picture using padding
                     picture.GetPaddingWidth(picture.ImageBitmap, pictureBox.Width);
                     picture.GetPaddingHeight(picture.ImageBitmap, pictureBox.Height);
                     // Reset padding to default. They were adding up before
                     pictureBox.Padding = new Padding(0, 0, 0, 0);
+                    // Set padding to center picture
                     pictureBox.Padding = new Padding(picture.PaddingWidth, picture.PaddingHeight, 0, 0);
+                    // Set bitmap
                     pictureBox.Image = picture.ImageBitmap;
                 }
                 catch (Exception)
@@ -62,14 +71,15 @@ namespace CSharpGoRGB.view
 
         private void SetRGBHex(MouseEventArgs e)
         {
+            // Get pixel location - padding (padding isn't taken into account otherwise)
             picture.Position.X = e.X - picture.PaddingWidth;
             picture.Position.Y = e.Y - picture.PaddingHeight;
-
+            // Get the colour
             picture.SetColor(picture.Position, picture.ImageBitmap);
-
+            // Set RGB and Hex values/text
             txtboxRGB.Text = picture.ReturnRGB(picture.Colour);
             txtBoxHex.Text = picture.ReturnHex(picture.Colour);
-
+            // Set sample colour
             pictureBoxSample.BackColor = picture.Colour;
         }
     }
