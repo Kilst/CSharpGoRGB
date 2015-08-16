@@ -58,12 +58,8 @@ namespace CSharpGoRGB.view
 
         private void pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            // Check there is a picture
-            if (picture.ImageBitmap != null)
-            {
-                // Set RGB and Hex text
-                SetRGBHex(e);
-            }
+            // Set RGB and Hex text
+            SetRGBHex(e);
         }
 
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)
@@ -71,27 +67,27 @@ namespace CSharpGoRGB.view
             // Check the mouse is held down
             if (e.Button == MouseButtons.Left)
             {
-                // Check there is a picture
-                if (picture.ImageBitmap != null)
-                {
-                    // Set RGB and Hex text
-                    SetRGBHex(e);
-                }
+                // Set RGB and Hex text
+                SetRGBHex(e);
             }
         }
 
         private void SetRGBHex(MouseEventArgs e)
         {
-            // Get pixel location - padding (padding isn't taken into account otherwise)
-            picture.Position.X = e.X - picture.PaddingWidth;
-            picture.Position.Y = e.Y - picture.PaddingHeight;
-            // Get the colour
-            picture.SetColor(picture.Position, picture.ImageBitmap);
-            // Set RGB and Hex values/text
-            txtboxRGB.Text = picture.ReturnRGB(picture.Colour);
-            txtBoxHex.Text = picture.ReturnHex(picture.Colour);
-            // Set sample colour
-            pictureBoxSample.BackColor = picture.Colour;
+            // Check there is a picture
+            if (picture.ImageBitmap != null)
+            {
+                // Get pixel location - padding (padding isn't taken into account otherwise)
+                picture.Position.X = e.X - picture.PaddingWidth;
+                picture.Position.Y = e.Y - picture.PaddingHeight;
+                // Get the colour
+                picture.SetColor(picture.Position, picture.ImageBitmap);
+                // Set RGB and Hex values/text
+                txtboxRGB.Text = picture.ReturnRGB(picture.Colour);
+                txtBoxHex.Text = picture.ReturnHex(picture.Colour);
+                // Set sample colour
+                pictureBoxSample.BackColor = picture.Colour;
+            }
         }
     }
 }
