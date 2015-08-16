@@ -39,9 +39,9 @@ namespace CSharpGoRGB.view
                     picture.ImageBitmap = new Bitmap(image);
                     // Scale Bitmap to fit in picturebox
                     picture.ScaleBitmap(picture.ImageBitmap, pictureBox.Width, pictureBox.Height);
-                    // Center picture using padding
-                    picture.GetPaddingWidth(picture.ImageBitmap, pictureBox.Width);
-                    picture.GetPaddingHeight(picture.ImageBitmap, pictureBox.Height);
+                    // Center picture using padding. Get paddings
+                    picture.PaddingWidth = picture.GetPadding(picture.ImageBitmap.Width, pictureBox.Width);
+                    picture.PaddingHeight = picture.GetPadding(picture.ImageBitmap.Height, pictureBox.Height);
                     // Reset padding to default. They were adding up before
                     pictureBox.Padding = new Padding(0, 0, 0, 0);
                     // Set padding to center picture
@@ -58,14 +58,25 @@ namespace CSharpGoRGB.view
 
         private void pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            SetRGBHex(e);
+            // Check there is a picture
+            if (picture.ImageBitmap != null)
+            {
+                // Set RGB and Hex text
+                SetRGBHex(e);
+            }
         }
 
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)
         {
+            // Check the mouse is held down
             if (e.Button == MouseButtons.Left)
             {
-                SetRGBHex(e);
+                // Check there is a picture
+                if (picture.ImageBitmap != null)
+                {
+                    // Set RGB and Hex text
+                    SetRGBHex(e);
+                }
             }
         }
 

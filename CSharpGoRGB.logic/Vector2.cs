@@ -8,6 +8,7 @@ namespace CSharpGoRGB.logic
 {
     public class Vector2
     {
+        // VERY simple vector2
         public int X { get; set; }
         public int Y { get; set; }
     }
