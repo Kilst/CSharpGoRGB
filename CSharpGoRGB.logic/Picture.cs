@@ -14,8 +14,6 @@ namespace CSharpGoRGB.logic
         public Bitmap ImageBitmap { get; set; }
         public Vector2 Position { get; set; }
         public Color Colour { get; set; }
-        public string RGB { get; set; }
-        public string Hex { get; set; }
         public int PaddingWidth { get; set; }
         public int PaddingHeight { get; set; }
 
