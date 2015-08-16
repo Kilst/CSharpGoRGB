@@ -20,8 +20,6 @@ namespace CSharpGoRGB.view
             InitializeComponent();
         }
 
-        // Testing GitHub push
-
         Picture picture = new Picture();
 
         private void btnLoadImage_Click(object sender, EventArgs e)
