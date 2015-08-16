@@ -9,3 +9,14 @@ C:\Users\Kilst\Desktop\C# Programs\CSharpGoRGB\CSharpGoRGB.view\obj\Debug\CSharp
 C:\Users\Kilst\Desktop\C# Programs\CSharpGoRGB\CSharpGoRGB.view\bin\Debug\CSharpGoRGB.logic.dll
 C:\Users\Kilst\Desktop\C# Programs\CSharpGoRGB\CSharpGoRGB.view\bin\Debug\CSharpGoRGB.logic.pdb
 C:\Users\Kilst\Desktop\C# Programs\CSharpGoRGB\CSharpGoRGB.view\obj\Debug\CSharpGoRGB.view.GoRGB.resources
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\bin\Debug\CSharpGoRGB.view.exe.config
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\obj\Debug\CSharpGoRGB.view.exe
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\obj\Debug\CSharpGoRGB.view.pdb
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\bin\Debug\CSharpGoRGB.view.exe
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\bin\Debug\CSharpGoRGB.view.pdb
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\bin\Debug\CSharpGoRGB.logic.dll
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\bin\Debug\CSharpGoRGB.logic.pdb
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\obj\Debug\CSharpGoRGB.view.csprojResolveAssemblyReference.cache
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\obj\Debug\CSharpGoRGB.view.GoRGB.resources
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\obj\Debug\CSharpGoRGB.view.Properties.Resources.resources
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.view\obj\Debug\CSharpGoRGB.view.csproj.GenerateResource.Cache

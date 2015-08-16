@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpGoRGB.view", "CSharpGoRGB.view\CSharpGoRGB.view.csproj", "{0D5D0A7B-1CFA-4106-9628-ADD1F28D4304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpGoRGB.logic", "CSharpGoRGB.logic\CSharpGoRGB.logic.csproj", "{F3BD8F94-B1CE-4645-BD03-D6D161789703}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D5D0A7B-1CFA-4106-9628-ADD1F28D4304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5D0A7B-1CFA-4106-9628-ADD1F28D4304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5D0A7B-1CFA-4106-9628-ADD1F28D4304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5D0A7B-1CFA-4106-9628-ADD1F28D4304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3BD8F94-B1CE-4645-BD03-D6D161789703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3BD8F94-B1CE-4645-BD03-D6D161789703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3BD8F94-B1CE-4645-BD03-D6D161789703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3BD8F94-B1CE-4645-BD03-D6D161789703}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

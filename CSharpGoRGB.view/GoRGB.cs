@@ -20,6 +20,8 @@ namespace CSharpGoRGB.view
             InitializeComponent();
         }
 
+        // Testing GitHub push
+
         Picture picture = new Picture();
 
         private void btnLoadImage_Click(object sender, EventArgs e)
@@ -35,6 +37,7 @@ namespace CSharpGoRGB.view
                     picture.ScaleBitmap(picture.ImageBitmap, pictureBox.Width, pictureBox.Height);
                     picture.GetPaddingWidth(picture.ImageBitmap, pictureBox.Width);
                     picture.GetPaddingHeight(picture.ImageBitmap, pictureBox.Height);
+                    pictureBox.Padding = new Padding(0, 0, 0, 0);
                     pictureBox.Padding = new Padding(picture.PaddingWidth, picture.PaddingHeight, 0, 0);
                     pictureBox.Image = picture.ImageBitmap;
                 }
