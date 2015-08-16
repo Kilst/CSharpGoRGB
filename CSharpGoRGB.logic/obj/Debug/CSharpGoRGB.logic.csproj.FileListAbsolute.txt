@@ -3,3 +3,8 @@ C:\Users\Kilst\Desktop\C# Programs\CSharpGoRGB\CSharpGoRGB.logic\bin\Debug\CShar
 C:\Users\Kilst\Desktop\C# Programs\CSharpGoRGB\CSharpGoRGB.logic\bin\Debug\CSharpGoRGB.logic.pdb
 C:\Users\Kilst\Desktop\C# Programs\CSharpGoRGB\CSharpGoRGB.logic\obj\Debug\CSharpGoRGB.logic.dll
 C:\Users\Kilst\Desktop\C# Programs\CSharpGoRGB\CSharpGoRGB.logic\obj\Debug\CSharpGoRGB.logic.pdb
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.logic\bin\Debug\CSharpGoRGB.logic.dll
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.logic\bin\Debug\CSharpGoRGB.logic.pdb
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.logic\obj\Debug\CSharpGoRGB.logic.csprojResolveAssemblyReference.cache
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.logic\obj\Debug\CSharpGoRGB.logic.dll
+C:\Users\Kilst\Documents\GitHub\CSharpGoRGB\CSharpGoRGB.logic\obj\Debug\CSharpGoRGB.logic.pdb

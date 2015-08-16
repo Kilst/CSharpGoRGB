@@ -56,7 +56,7 @@ namespace CSharpGoRGB.logic
             // Check the image is larger than the picturebox
             if ((picturebox - bitmap) > 0)
             {
-                // Subtract the width from the bitmap width, then divide by 2, to get the padding
+                // Subtract the width/height from the bitmap width/height, then divide by 2, to get the padding
                 padding = (picturebox - bitmap) / 2;
             }
 
