@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 //..
 using System.Drawing;
+using System.IO;
 
 namespace CSharpGoRGB.logic
 {
     public class Picture
     {
         // Fields? Properties?
-        public Bitmap ImageBitmap { get; set; }
+        //public Bitmap ImageBitmap { get; set; }
+        public byte[] BitmapArray { get; set; }
         public Vector2 Position { get; set; }
         public Color Colour { get; set; }
         public int PaddingWidth { get; set; }
@@ -23,9 +25,26 @@ namespace CSharpGoRGB.logic
         {
             Position = new Vector2();
         }
+
         // Methods
 
-        public void ScaleBitmap(Bitmap bitmap, int width, int height)
+        public byte[] BitmapToByteArray(Bitmap bitmap)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                System.Drawing.Imaging.ImageFormat imageFormat = bitmap.RawFormat;
+                bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+                return ms.ToArray();
+            }
+        }
+
+        public Bitmap ArrayToBitmap(byte[] bitmaprArray)
+        {
+            MemoryStream imagestream = new MemoryStream(bitmaprArray);
+            return new Bitmap(imagestream);
+        }
+
+        public Bitmap ScaleBitmap(Bitmap bitmap, int width, int height)
         {
             double scale = 1;
             // Check wheather to use width or height for scaling
@@ -45,7 +64,10 @@ namespace CSharpGoRGB.logic
                 scale = 1;
             }
             // Create a new bitmap using the scale
-            this.ImageBitmap = new Bitmap(this.ImageBitmap, new Size((int)(bitmap.Width / scale), (int)(bitmap.Height / scale)));
+            bitmap = new Bitmap(bitmap, new Size((int)(bitmap.Width / scale), (int)(bitmap.Height / scale)));
+            // Convert bitmap to byte array
+            this.BitmapArray = BitmapToByteArray(bitmap);
+            return bitmap;
         }
 
         public int GetPadding(int bitmap, int picturebox)

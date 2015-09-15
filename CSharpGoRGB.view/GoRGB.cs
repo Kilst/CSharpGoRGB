@@ -33,21 +33,19 @@ namespace CSharpGoRGB.view
                 string file = openFileDialog1.FileName;
                 try
                 {
-                    // Create image from file location
-                    Image image = Image.FromFile(file);
                     // Create and set bitmap
-                    picture.ImageBitmap = new Bitmap(image);
+                    Bitmap bitmap = new Bitmap(Image.FromFile(file));
                     // Scale Bitmap to fit in picturebox
-                    picture.ScaleBitmap(picture.ImageBitmap, pictureBox.Width, pictureBox.Height);
+                    bitmap = picture.ScaleBitmap(bitmap, pictureBox.Width, pictureBox.Height);
                     // Center picture using padding. Get paddings
-                    picture.PaddingWidth = picture.GetPadding(picture.ImageBitmap.Width, pictureBox.Width);
-                    picture.PaddingHeight = picture.GetPadding(picture.ImageBitmap.Height, pictureBox.Height);
+                    picture.PaddingWidth = picture.GetPadding(bitmap.Width, pictureBox.Width);
+                    picture.PaddingHeight = picture.GetPadding(bitmap.Height, pictureBox.Height);
                     // Reset padding to default. They were adding up before
                     pictureBox.Padding = new Padding(0, 0, 0, 0);
                     // Set padding to center picture
                     pictureBox.Padding = new Padding(picture.PaddingWidth, picture.PaddingHeight, 0, 0);
                     // Set bitmap
-                    pictureBox.Image = picture.ImageBitmap;
+                    pictureBox.Image = bitmap;
                 }
                 catch (Exception)
                 {
@@ -74,14 +72,24 @@ namespace CSharpGoRGB.view
 
         private void SetRGBHex(MouseEventArgs e)
         {
+            Bitmap bitmap = null;
+            try
+            {
+                // Get bitmap from array
+                bitmap = picture.ArrayToBitmap(picture.BitmapArray);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bitmap error!", "Error");
+            }
             // Check there is a picture
-            if (picture.ImageBitmap != null)
+            if (bitmap != null)
             {
                 // Get pixel location - padding (padding isn't taken into account otherwise)
                 picture.Position.X = e.X - picture.PaddingWidth;
                 picture.Position.Y = e.Y - picture.PaddingHeight;
                 // Get the colour
-                picture.SetColor(picture.Position, picture.ImageBitmap);
+                picture.SetColor(picture.Position, bitmap);
                 // Set RGB and Hex values/text
                 txtboxRGB.Text = picture.ReturnRGB(picture.Colour);
                 txtBoxHex.Text = picture.ReturnHex(picture.Colour);
