@@ -38,9 +38,9 @@ namespace CSharpGoRGB.logic
             }
         }
 
-        public Bitmap ArrayToBitmap(byte[] bitmaprArray)
+        public Bitmap ArrayToBitmap(byte[] bitmapArray)
         {
-            MemoryStream imagestream = new MemoryStream(bitmaprArray);
+            MemoryStream imagestream = new MemoryStream(bitmapArray);
             return new Bitmap(imagestream);
         }
 
